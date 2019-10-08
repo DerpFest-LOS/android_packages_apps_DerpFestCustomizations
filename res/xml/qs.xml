@@ -25,6 +25,12 @@
             android:summary="@string/qs_footer_datausage_summary"
             android:defaultValue="true" />
 
+        <Preference
+            android:key="qs_header_image"
+            android:title="@string/qs_header_image_title"
+            android:summary="@string/qs_header_image_summary"
+            android:fragment="org.derpfest.customizations.fragment.QsHeaderImageSettings" />
+
     <PreferenceCategory
         android:title="@string/category_name_qs_brightness_slider">
 
