@@ -71,4 +71,8 @@
     <string name="ambient_edge_light_duration_title">Effektdauer</string>
     <string name="ambient_edge_light_repeat_count_title">Anzahl der Wiederholungen</string>
     <string name="ambient_edge_light_width_title">Beleuchtungsbreite</string>
+
+    <!-- Fingerprint Ripple Effect -->
+    <string name="enable_fingerprint_ripple_effect_title">Welleneffekt</string>
+    <string name="enable_fingerprint_ripple_effect_summary">Welleneffekt zeigen bei Entsperrung mit Fingerabdruck</string>
 </resources>
