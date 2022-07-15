@@ -28,6 +28,10 @@
     <string name="dark_mode_summary_default">Enable system dark theme</string>
     <string name="dark_mode_summary_powersave">Power saver is enabled</string>
 
+    <!-- StatusBar -->
+    <string name="icon_manager_title">Icon manager</string>
+    <string name="icon_manager_summary">Control visibility of status bar icons</string>
+
     <!-- Status bar - Brightness slider -->
     <string name="category_name_qs_brightness_slider">Brightness slider</string>
     <string name="qs_brightness_slider_title">Brightness slider</string>
