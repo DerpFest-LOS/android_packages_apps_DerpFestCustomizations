@@ -9,6 +9,12 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/statusbar_title" >
 
+    <Preference
+        android:key="status_bar_clock"
+        android:fragment="org.derpfest.customizations.fragment.ClockSettingsFragment"
+        android:icon="@drawable/ic_status_bar_clock"
+        android:title="@string/status_bar_clock_title" />
+
         <Preference
             android:key="traffic"
             android:icon="@drawable/ic_traffic"
