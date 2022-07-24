@@ -31,6 +31,7 @@
     <!-- StatusBar -->
     <string name="icon_manager_title">Icon manager</string>
     <string name="icon_manager_summary">Control visibility of status bar icons</string>
+    <string name="traffic_title">Traffic Indicators</string>
 
     <!-- Status bar - Brightness slider -->
     <string name="category_name_qs_brightness_slider">Brightness slider</string>
