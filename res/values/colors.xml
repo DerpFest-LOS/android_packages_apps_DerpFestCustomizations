@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: DerpFest AOSP
+     SPDX-License-Identifier: Apache-2.0
+-->
+
+<resources>
+
+    <!-- Ambient edge light -->
+    <color name="ambient_edge_light_color_selector_item_outer_bg_color">@android:color/white</color>
+    <color name="ambient_edge_light_color_selector_selected_icon_tint_color">#AA000000</color>
+</resources>
