@@ -20,6 +20,7 @@ import android.app.AlertDialog;
 import android.app.settings.SettingsEnums;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.provider.Settings;
@@ -65,10 +66,12 @@ public class ClockSettingsFragment extends SettingsPreferenceFragment
     private static final int CLOCK_DATE_STYLE_UPPERCASE = 2;
 
     private static final int CLOCK_STYLE_LEFT = 0;
+    private static final int CLOCK_STYLE_CENTER = 1;
 
     private static final int DEFAULT_CLOCK_DATE_FORMAT_INDEX = 9;
     private static final int CUSTOM_CLOCK_DATE_FORMAT_INDEX = 18;
 
+    private ListPreference mStatusBarClockStyle;
     private ListPreference mStatusBarAmPm;
     private ListPreference mClockDateDisplay;
     private ListPreference mClockDateStyle;
@@ -86,7 +89,9 @@ public class ClockSettingsFragment extends SettingsPreferenceFragment
         addPreferencesFromResource(R.xml.statusbar_clock);
 
         final ContentResolver resolver = getActivity().getContentResolver();
+        final Resources res = getActivity().getResources();
 
+        mStatusBarClockStyle = (ListPreference) findPreference(STATUSBAR_CLOCK_STYLE);
         mStatusBarAmPm = (ListPreference) findPreference(STATUSBAR_CLOCK_AM_PM_STYLE);
         mClockDateDisplay = (ListPreference) findPreference(STATUSBAR_CLOCK_DATE_DISPLAY);
         mClockDateStyle = (ListPreference) findPreference(STATUSBAR_CLOCK_DATE_STYLE);
@@ -97,6 +102,29 @@ public class ClockSettingsFragment extends SettingsPreferenceFragment
         mClockAutoHide = findPreference(STATUSBAR_CLOCK_AUTO_HIDE);
         mClockAutoHideHDuration = findPreference(STATUSBAR_CLOCK_AUTO_HIDE_HDURATION);
         mClockAutoHideSDuration = findPreference(STATUSBAR_CLOCK_AUTO_HIDE_SDURATION);
+
+        final boolean hasCenteredCutout = res.getBoolean(
+                R.bool.config_hasCenteredCutout);
+        final CharSequence[] entries;
+        final CharSequence[] entryValues;
+        if (hasCenteredCutout) {
+            entries = res.getTextArray(R.array.status_bar_clock_style_centered_cutout_entries);
+            entryValues = res.getTextArray(R.array.status_bar_clock_style_centered_cutout_values);
+        } else {
+            entries = res.getTextArray(R.array.status_bar_clock_style_entries);
+            entryValues = res.getTextArray(R.array.status_bar_clock_style_values);
+        }
+        mStatusBarClockStyle.setEntries(entries);
+        mStatusBarClockStyle.setEntryValues(entryValues);
+        int style = Settings.System.getIntForUser(resolver,
+                STATUSBAR_CLOCK_STYLE, CLOCK_STYLE_LEFT,
+                UserHandle.USER_CURRENT);
+        if (style == CLOCK_STYLE_CENTER && hasCenteredCutout) {
+            style = CLOCK_STYLE_LEFT;
+        }
+        mStatusBarClockStyle.setValue(String.valueOf(style));
+        mStatusBarClockStyle.setSummary(mStatusBarClockStyle.getEntry());
+        mStatusBarClockStyle.setOnPreferenceChangeListener(this);
 
         if (DateFormat.is24HourFormat(getActivity())) {
             mStatusBarAmPm.setEnabled(false);
@@ -131,6 +159,14 @@ public class ClockSettingsFragment extends SettingsPreferenceFragment
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == mStatusBarClockStyle) {
+            final int style = Integer.parseInt((String) newValue);
+            final int idx = mStatusBarClockStyle.findIndexOfValue((String) newValue);
+            Settings.System.putIntForUser(getActivity().getContentResolver(),
+                    STATUSBAR_CLOCK_STYLE, style, UserHandle.USER_CURRENT);
+            mStatusBarClockStyle.setSummary(mStatusBarClockStyle.getEntries()[idx]);
+            return true;
+        }
         if (preference == mClockDateDisplay) {
             setDateOptions(Integer.parseInt((String) newValue) != CLOCK_DATE_DISPLAY_GONE);
             return true;

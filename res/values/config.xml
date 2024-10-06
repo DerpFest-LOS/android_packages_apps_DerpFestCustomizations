@@ -8,4 +8,7 @@
 
     <!-- Whether to show Ambient Edge Light feature in Settings Options -->
     <bool name="config_show_ambient_edge_light">true</bool>
+
+    <!-- Whether device has a centered cutout -->
+    <bool name="config_hasCenteredCutout">false</bool>
 </resources>
