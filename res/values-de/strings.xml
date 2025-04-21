@@ -46,4 +46,8 @@
     <!-- QS footer data usage -->
     <string name="qs_footer_datausage_title">Datennutzung anzeigen</string>
     <string name="qs_footer_datausage_summary">Tägliche Mobilfunk-/WLAN-Datennutzung in der QS-Fußzeile anzeigen</string>
+
+    <!-- Unlimited g00gle ph0t0s st0rage -->
+    <string name="use_photos_spoof_title">Unbegrenzter Google Fotos Speicherplatz</string>
+    <string name="use_photos_spoof_summary">Dein Gerät wird als Pixel XL ausgewiesen, um kostenlos Videos und Fotos in verlustfreier Qualität bei Google Fotos zu speichern</string>
 </resources>
