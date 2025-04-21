@@ -19,6 +19,12 @@
             android:max="100"
             android:min="1" />
 
+        <org.derpfest.support.preferences.SecureSettingSwitchPreference
+            android:key="qs_show_data_usage"
+            android:title="@string/qs_footer_datausage_title"
+            android:summary="@string/qs_footer_datausage_summary"
+            android:defaultValue="true" />
+
     <PreferenceCategory
         android:title="@string/category_name_qs_brightness_slider">
 
