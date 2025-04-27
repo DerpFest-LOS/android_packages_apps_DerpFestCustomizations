@@ -19,6 +19,7 @@
     <string name="buttons_summary">Set default behavior and actions for keys</string>
     <string name="lockscreen_title">Lockscreen</string>
     <string name="lockscreen_summary">Configure options for lockscreen &amp; ambient display</string>
+    <string name="lockscreen_clock_title">Clock</string>
     <string name="misc_title">Miscellaneous</string>
     <string name="misc_summary">Everything which doesn\’t fit elsewhere</string>
 
@@ -124,4 +125,9 @@
     <string name="monet_engine_color_source_home">Home wallpaper</string>
     <string name="monet_engine_color_source_lock">Lock wallpaper</string>
     <string name="monet_engine_color_source_preset">Preset</string>
+
+    <!-- Colored keyguard clock -->
+    <string name="lockscreen_clock_colored_title">Colored clock</string>
+    <string name="lockscreen_clock_colored_summary_on">Clock color is affected by monet</string>
+    <string name="lockscreen_clock_colored_summary_off">Clock color is always black or white</string>
 </resources>

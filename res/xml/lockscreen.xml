@@ -23,4 +23,17 @@
         settings:controller="org.derpfest.customizations.fragment.AmbientEdgeLightPreferenceController"
         settings:requiresConfig="@bool/config_show_ambient_edge_light" />
 
+    <PreferenceCategory
+        android:key="lockscreen_clock_category"
+        android:title="@string/lockscreen_clock_title">
+
+        <org.derpfest.support.preferences.SystemSettingSwitchPreference
+            android:key="lockscreen_clock_colored"
+            android:title="@string/lockscreen_clock_colored_title"
+            android:summaryOn="@string/lockscreen_clock_colored_summary_on"
+            android:summaryOff="@string/lockscreen_clock_colored_summary_off"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>

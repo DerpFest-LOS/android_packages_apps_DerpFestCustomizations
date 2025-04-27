@@ -19,6 +19,7 @@
     <string name="buttons_summary">Standardverhalten und -aktionen für Tasten festlegen</string>
     <string name="lockscreen_title">Sperrbildschirm</string>
     <string name="lockscreen_summary">Optionen für Sperrbildschirm &amp; AOD konfigurieren</string>
+    <string name="lockscreen_clock_title">Uhr</string>
     <string name="misc_title">Sonstiges</string>
     <string name="misc_summary">Alles, was woanders nicht hinpasst</string>
 
@@ -109,4 +110,9 @@
     <string name="monet_engine_color_source_home">Hintergrundbild des Startbildschirms</string>
     <string name="monet_engine_color_source_lock">Hintergrundbild des Sperrbildschirms</string>
     <string name="monet_engine_color_source_preset">Voreinstellung</string>
+
+    <!-- Colored keyguard clock -->
+    <string name="lockscreen_clock_colored_title">Farbige Uhr</string>
+    <string name="lockscreen_clock_colored_summary_on">Die Farbe der Uhr wird von Monet beeinflusst</string>
+    <string name="lockscreen_clock_colored_summary_off">Die Farbe der Uhr ist immer schwarz oder weiß</string>
 </resources>
