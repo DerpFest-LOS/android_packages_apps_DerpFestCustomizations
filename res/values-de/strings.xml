@@ -120,5 +120,9 @@
 
     <!-- Ongoing action chip -->
     <string name="ongoing_action_chip_title">Fortschrittsanzeige für laufende Aktionen</string>
-    <string name="ongoing_action_chip_summary">Fortschrittsanzeige in der Statusleiste für laufende Aktionen wie Downloads anzeigen</string> 
+    <string name="ongoing_action_chip_summary">Fortschrittsanzeige in der Statusleiste für laufende Aktionen wie Downloads anzeigen</string>
+
+    <!-- Heads-up -->
+    <string name="compact_heads_up_notifications_enabled_title">Kompakte Pop-ups</string>
+    <string name="compact_heads_up_notifications_enabled_summary">Kompakte Benachrichtigungsanzeige</string>
 </resources>

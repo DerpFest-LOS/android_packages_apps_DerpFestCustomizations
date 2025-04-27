@@ -135,5 +135,9 @@
 
     <!-- Ongoing action chip -->
     <string name="ongoing_action_chip_title">Ongoing action chip</string>
-    <string name="ongoing_action_chip_summary">Show progress indicator in status bar for ongoing actions like downloads</string> 
+    <string name="ongoing_action_chip_summary">Show progress indicator in status bar for ongoing actions like downloads</string>
+
+    <!-- Heads-up -->
+    <string name="compact_heads_up_notifications_enabled_title">Compact heads-up</string>
+    <string name="compact_heads_up_notifications_enabled_summary">Display notifications in compact size</string>
 </resources>
