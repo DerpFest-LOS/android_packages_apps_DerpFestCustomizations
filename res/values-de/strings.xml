@@ -117,4 +117,8 @@
     <string name="lockscreen_clock_colored_title">Farbige Uhr</string>
     <string name="lockscreen_clock_colored_summary_on">Die Farbe der Uhr wird von Monet beeinflusst</string>
     <string name="lockscreen_clock_colored_summary_off">Die Farbe der Uhr ist immer schwarz oder weiß</string>
+
+    <!-- Ongoing action chip -->
+    <string name="ongoing_action_chip_title">Fortschrittsanzeige für laufende Aktionen</string>
+    <string name="ongoing_action_chip_summary">Fortschrittsanzeige in der Statusleiste für laufende Aktionen wie Downloads anzeigen</string> 
 </resources>

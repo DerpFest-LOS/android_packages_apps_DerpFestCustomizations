@@ -132,4 +132,8 @@
     <string name="lockscreen_clock_colored_title">Colored clock</string>
     <string name="lockscreen_clock_colored_summary_on">Clock color is affected by monet</string>
     <string name="lockscreen_clock_colored_summary_off">Clock color is always black or white</string>
+
+    <!-- Ongoing action chip -->
+    <string name="ongoing_action_chip_title">Ongoing action chip</string>
+    <string name="ongoing_action_chip_summary">Show progress indicator in status bar for ongoing actions like downloads</string> 
 </resources>
