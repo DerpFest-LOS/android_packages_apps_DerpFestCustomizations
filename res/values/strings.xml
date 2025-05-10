@@ -194,4 +194,13 @@
     <string name="enable">Enable</string>
     <string name="qs_header_offset_title">Header image offset</string>
     <string name="qs_header_offset_summary">Adjust the image header size</string>
+
+    <!-- Privacy Settings -->
+    <string name="privacy_settings_title">Privacy</string>
+    <string name="privacy_indicators_title">Privacy Indicators</string>
+    <string name="privacy_indicators_summary">Show indicators when apps use camera, microphone or location</string>
+    <string name="mic_camera_privacy_indicators_title">Camera &amp; Microphone</string>
+    <string name="mic_camera_privacy_indicators_summary">Show indicators when apps use camera or microphone</string>
+    <string name="location_privacy_indicator_title">Location</string>
+    <string name="location_privacy_indicator_summary">Show indicator when apps use location</string>
 </resources>
