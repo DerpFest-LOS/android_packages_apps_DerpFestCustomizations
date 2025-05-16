@@ -159,8 +159,10 @@
     • Automatically hides when no active transfers are detected.
     • Single tap opens the app responsible for the download.
 
-    The progress bar dynamically switches between media and download states, ensuring you always have the most relevant information at a glance."
+The progress bar dynamically switches between media and download states, ensuring you always have the most relevant information at a glance."
     </string>
+    <string name="compact_progress_mode_title">Compact Progress Indicator</string>
+    <string name="compact_progress_mode_summary">Use a compact circular indicator for ongoing actions</string>
 
     <!-- Heads-up -->
     <string name="compact_heads_up_notifications_enabled_title">Compact heads-up</string>
