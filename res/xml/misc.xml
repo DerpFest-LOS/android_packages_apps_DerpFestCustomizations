@@ -19,7 +19,7 @@
         android:key="persist.sys.pixelprops.pi"
         android:title="@string/pi_spoof_title"
         android:summary="@string/pi_spoof_summary"
-        android:defaultValue="true" />
+        android:defaultValue="false" />
 
     <org.derpfest.support.preferences.SystemPropertySwitchPreference
         android:key="persist.sys.pixelprops.gphotos"
