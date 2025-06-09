@@ -19,7 +19,7 @@ class TickerBlacklistSettingsFragment : PerAppSwitchConfigFragment() {
 
     private var checkedList = listOf<String>()
 
-    override fun getTitleResId() = R.string.status_bar_notification_ticker_blacklist_title
+    fun getTitleResId() = R.string.status_bar_notification_ticker_blacklist_title
 
     override fun getTopInfoResId() = R.string.status_bar_notification_ticker_blacklist_summary
 
