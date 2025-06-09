@@ -49,6 +49,12 @@ public class ClockSettingsFragment extends SettingsPreferenceFragment
     private static final String STATUSBAR_CLOCK_DATE_STYLE = "statusbar_clock_date_style";
     private static final String STATUSBAR_CLOCK_DATE_FORMAT = "statusbar_clock_date_format";
     private static final String STATUSBAR_CLOCK_DATE_POSITION = "statusbar_clock_date_position";
+    private static final String STATUSBAR_CLOCK = "statusbar_clock";
+    private static final String STATUSBAR_CLOCK_STYLE = "statusbar_clock_style";
+    private static final String STATUSBAR_CLOCK_SECONDS = "statusbar_clock_seconds";
+    private static final String STATUSBAR_CLOCK_AUTO_HIDE = "statusbar_clock_auto_hide";
+    private static final String STATUSBAR_CLOCK_AUTO_HIDE_HDURATION = "statusbar_clock_auto_hide_hduration";
+    private static final String STATUSBAR_CLOCK_AUTO_HIDE_SDURATION = "statusbar_clock_auto_hide_sduration";
 
     private static final int AM_PM_STYLE_GONE = 2;
 
@@ -68,6 +74,11 @@ public class ClockSettingsFragment extends SettingsPreferenceFragment
     private ListPreference mClockDateStyle;
     private ListPreference mClockDateFormat;
     private ListPreference mClockDatePosition;
+    private ListPreference mClockStyle;
+    private Preference mClockSeconds;
+    private Preference mClockAutoHide;
+    private Preference mClockAutoHideHDuration;
+    private Preference mClockAutoHideSDuration;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -81,6 +92,11 @@ public class ClockSettingsFragment extends SettingsPreferenceFragment
         mClockDateStyle = (ListPreference) findPreference(STATUSBAR_CLOCK_DATE_STYLE);
         mClockDateFormat = (ListPreference) findPreference(STATUSBAR_CLOCK_DATE_FORMAT);
         mClockDatePosition = (ListPreference) findPreference(STATUSBAR_CLOCK_DATE_POSITION);
+        mClockStyle = (ListPreference) findPreference(STATUSBAR_CLOCK_STYLE);
+        mClockSeconds = findPreference(STATUSBAR_CLOCK_SECONDS);
+        mClockAutoHide = findPreference(STATUSBAR_CLOCK_AUTO_HIDE);
+        mClockAutoHideHDuration = findPreference(STATUSBAR_CLOCK_AUTO_HIDE_HDURATION);
+        mClockAutoHideSDuration = findPreference(STATUSBAR_CLOCK_AUTO_HIDE_SDURATION);
 
         if (DateFormat.is24HourFormat(getActivity())) {
             mStatusBarAmPm.setEnabled(false);
@@ -88,8 +104,8 @@ public class ClockSettingsFragment extends SettingsPreferenceFragment
         }
 
         mClockDateDisplay.setOnPreferenceChangeListener(this);
-
         mClockDateStyle.setOnPreferenceChangeListener(this);
+        mClockStyle.setOnPreferenceChangeListener(this);
 
         String clockFormat = Settings.System.getStringForUser(resolver,
                  Settings.System.STATUSBAR_CLOCK_DATE_FORMAT, UserHandle.USER_CURRENT);
@@ -123,13 +139,16 @@ public class ClockSettingsFragment extends SettingsPreferenceFragment
             parseClockDateFormats(Integer.parseInt((String) newValue));
             return true;
         }
+        if (preference == mClockStyle) {
+            return true;
+        }
         if (preference == mClockDateFormat) {
             final int index = mClockDateFormat.findIndexOfValue((String) newValue);
             if (index == CUSTOM_CLOCK_DATE_FORMAT_INDEX) {
                 final EditText input = new EditText(getActivity());
                 final String oldText = Settings.System.getStringForUser(
                         getActivity().getContentResolver(),
-                        STATUSBAR_CLOCK_DATE_FORMAT,
+                        Settings.System.STATUSBAR_CLOCK_DATE_FORMAT,
                         UserHandle.USER_CURRENT);
                 if (oldText != null) {
                     input.setText(oldText);
