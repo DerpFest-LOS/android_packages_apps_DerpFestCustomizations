@@ -251,4 +251,11 @@ The progress bar dynamically switches between media and download states, ensurin
     <string name="mic_camera_privacy_indicators_summary">Show indicators when apps use camera or microphone</string>
     <string name="location_privacy_indicator_title">Location</string>
     <string name="location_privacy_indicator_summary">Show indicator when apps use location</string>
+
+    <!-- Status bar notification ticker -->
+    <string name="status_bar_notification_ticker_title">Notification ticker</string>
+    <string name="status_bar_notification_ticker_summary">Show notification content on status bar when heads up notification is not available</string>
+    <string name="status_bar_notification_ticker_enable_title">Enable notification ticker</string>
+    <string name="status_bar_notification_ticker_blacklist_title">Blacklist apps</string>
+    <string name="status_bar_notification_ticker_blacklist_summary">Disable selected apps from showing notification ticker</string>
 </resources>
