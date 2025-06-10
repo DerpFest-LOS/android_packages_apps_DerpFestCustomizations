@@ -48,13 +48,11 @@
                 android:targetClass="org.lineageos.lineageparts.statusbar.StatusBarLogo" />
         </Preference>
 
-        <com.android.settingslib.PrimarySwitchPreference
+        <Preference
             android:key="status_bar_notification_ticker"
             android:title="@string/status_bar_notification_ticker_title"
             android:summary="@string/status_bar_notification_ticker_summary"
-            android:fragment="org.derpfest.customizations.fragment.TickerSettingsFragment"
-            android:defaultValue="true"
-            settings:controller="org.derpfest.customizations.fragment.TickerTogglePreferenceController" />
+            android:fragment="org.derpfest.customizations.fragment.TickerSettingsFragment" />
 
         <Preference
             android:key="icon_manager"
