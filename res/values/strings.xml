@@ -258,4 +258,7 @@ The progress bar dynamically switches between media and download states, ensurin
     <string name="status_bar_notification_ticker_enable_title">Enable notification ticker</string>
     <string name="status_bar_notification_ticker_blacklist_title">Blacklist apps</string>
     <string name="status_bar_notification_ticker_blacklist_summary">Disable selected apps from showing notification ticker</string>
+
+    <!-- Statusbar logo -->
+    <string name="status_bar_logo_title">Custom logo</string>
 </resources>
