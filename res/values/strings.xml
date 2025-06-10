@@ -261,4 +261,7 @@ The progress bar dynamically switches between media and download states, ensurin
 
     <!-- Statusbar logo -->
     <string name="status_bar_logo_title">Custom logo</string>
+
+    <!-- Statusbar battery -->
+    <string name="battery_title">Battery indicator</string>
 </resources>
