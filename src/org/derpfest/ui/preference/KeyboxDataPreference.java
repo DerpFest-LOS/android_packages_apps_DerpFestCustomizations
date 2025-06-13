@@ -63,7 +63,7 @@ public class KeyboxDataPreference extends Preference {
         updateSummary();
     }
 
-    private void updateSummary() {
+    public void updateSummary() {
         try {
             BufferedReader reader = new BufferedReader(new FileReader(KEYBOX_DATA_PATH));
             StringBuilder xml = new StringBuilder();

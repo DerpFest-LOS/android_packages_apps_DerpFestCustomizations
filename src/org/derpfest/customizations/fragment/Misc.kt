@@ -42,6 +42,8 @@ class Misc : SettingsPreferenceFragment(), Preference.OnPreferenceChangeListener
                     if (xml != null && validateXml(xml)) {
                         Runtime.getRuntime().exec("su -c cp ${uri.path} $KEYBOX_DATA_PATH")
                         findPreference<KeyboxDataPreference>("keybox_data")?.updateSummary()
+                    } else {
+                        Log.e(TAG, "Invalid keybox data format")
                     }
                 } catch (e: Exception) {
                     Log.e(TAG, "Failed to copy keybox data", e)
