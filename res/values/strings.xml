@@ -302,4 +302,8 @@ The progress bar dynamically switches between media and download states, ensurin
     <string name="keybox_data_category_summary">Manage key attestation data for system-wide app verification</string>
     <string name="keybox_data_title">Select keybox XML to spoof</string>
     <string name="keybox_data_summary">Select keybox XML used for key attestation spoofing for all apps system wide. Click the delete button in order to reset the keybox data values used by the system.</string>
+
+    <!-- Expressive Design -->
+    <string name="expressive_design_title">Expressive Design</string>
+    <string name="expressive_design_summary">Enable Expressive Design preview</string>
 </resources>

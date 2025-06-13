@@ -15,6 +15,13 @@
         android:summary="@string/ignore_window_secure_summary"
         android:defaultValue="false" />
 
+    <SwitchPreferenceCompat
+        android:key="expressive_design"
+        android:title="@string/expressive_design_title"
+        android:summary="@string/expressive_design_summary"
+        android:defaultValue="false"
+        android:persistent="true" />
+
     <PreferenceCategory
         android:title="@string/spoofing_title"
         android:summary="@string/spoofing_title_summary">

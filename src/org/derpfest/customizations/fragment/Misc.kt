@@ -11,9 +11,11 @@ import android.app.Activity
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.os.SystemProperties
 import android.util.Log
 
 import androidx.preference.Preference
+import androidx.preference.SwitchPreferenceCompat
 
 import com.android.settings.R
 import com.android.settings.SettingsPreferenceFragment
@@ -25,12 +27,27 @@ class Misc : SettingsPreferenceFragment(), Preference.OnPreferenceChangeListener
     private val REQUEST_CODE = 1001
     private val KEYBOX_DATA_PATH = "/data/misc/keybox/keybox.xml"
 
+    private var mExpressiveDesign: SwitchPreferenceCompat? = null
+
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         addPreferencesFromResource(R.xml.misc)
+
+        mExpressiveDesign = findPreference(KEY_EXPRESSIVE_DESIGN)
+
+        mExpressiveDesign?.apply {
+            isChecked = SystemProperties.getBoolean(PROP_EXPRESSIVE_DESIGN, false)
+            setOnPreferenceChangeListener(this@Misc)
+        }
     }
 
     override fun onPreferenceChange(preference: Preference, newValue: Any?): Boolean {
-        return true
+        when (preference.key) {
+            KEY_EXPRESSIVE_DESIGN -> {
+                SystemProperties.set(PROP_EXPRESSIVE_DESIGN, if (newValue as Boolean) "1" else "0")
+                return true
+            }
+        }
+        return false
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -132,5 +149,7 @@ class Misc : SettingsPreferenceFragment(), Preference.OnPreferenceChangeListener
 
     companion object {
         const val TAG = "DerpFestCustomizations"
+        private const val KEY_EXPRESSIVE_DESIGN = "expressive_design"
+        private const val PROP_EXPRESSIVE_DESIGN = "persist.sys.is_expressive_design_enabled"
     }
 }
