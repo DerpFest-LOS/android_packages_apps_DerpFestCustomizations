@@ -296,4 +296,10 @@ The progress bar dynamically switches between media and download states, ensurin
     <!-- Spoofing -->
     <string name="spoofing_title">Spoofing</string>
     <string name="spoofing_title_summary">Spoof as different device to unlock application features</string>
+
+    <!-- Keybox Data -->
+    <string name="keybox_data_category_title">Key Attestation</string>
+    <string name="keybox_data_category_summary">Manage key attestation data for system-wide app verification</string>
+    <string name="keybox_data_title">Select keybox XML to spoof</string>
+    <string name="keybox_data_summary">Select keybox XML used for key attestation spoofing for all apps system wide. Click the delete button in order to reset the keybox data values used by the system.</string>
 </resources>

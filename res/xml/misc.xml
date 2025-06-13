@@ -33,4 +33,14 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:title="@string/keybox_data_category_title"
+        android:summary="@string/keybox_data_category_summary">
+
+        <org.derpfest.ui.preference.KeyboxDataPreference
+            android:key="keybox_data"
+            android:persistent="false" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
