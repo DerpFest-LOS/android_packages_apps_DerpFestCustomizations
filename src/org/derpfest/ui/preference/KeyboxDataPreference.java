@@ -27,6 +27,7 @@ public class KeyboxDataPreference extends Preference {
     private static final String TAG = "KeyboxDataPreference";
     private static final int REQUEST_CODE = 1001;
     private static final String KEYBOX_DATA_PATH = "/data/misc/keybox/keybox.xml";
+    private TextView mSummaryView;
 
     public KeyboxDataPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -37,17 +38,17 @@ public class KeyboxDataPreference extends Preference {
     public void onBindViewHolder(PreferenceViewHolder holder) {
         super.onBindViewHolder(holder);
         TextView title = holder.itemView.findViewById(R.id.title);
-        TextView summary = holder.itemView.findViewById(R.id.summary);
+        mSummaryView = holder.itemView.findViewById(R.id.summary);
         ImageButton deleteButton = holder.itemView.findViewById(R.id.delete_button);
 
         title.setText(R.string.keybox_data_title);
-        summary.setText(R.string.keybox_data_summary);
+        updateSummaryText();
 
         deleteButton.setOnClickListener(v -> {
             // Reset keybox data
             try {
                 Runtime.getRuntime().exec("su -c rm " + KEYBOX_DATA_PATH);
-                updateSummary();
+                updateSummaryText();
             } catch (Exception e) {
                 Log.e(TAG, "Failed to delete keybox data", e);
             }
@@ -59,11 +60,15 @@ public class KeyboxDataPreference extends Preference {
             intent.setType("text/xml");
             getContext().startActivity(intent);
         });
-
-        updateSummary();
     }
 
     public void updateSummary() {
+        if (mSummaryView != null) {
+            updateSummaryText();
+        }
+    }
+
+    private void updateSummaryText() {
         try {
             BufferedReader reader = new BufferedReader(new FileReader(KEYBOX_DATA_PATH));
             StringBuilder xml = new StringBuilder();
@@ -74,12 +79,12 @@ public class KeyboxDataPreference extends Preference {
             reader.close();
 
             if (validateXml(xml.toString())) {
-                setSummary(R.string.keybox_data_summary);
+                mSummaryView.setText(R.string.keybox_data_summary);
             } else {
-                setSummary("Invalid keybox data");
+                mSummaryView.setText("Invalid keybox data");
             }
         } catch (Exception e) {
-            setSummary("No keybox data");
+            mSummaryView.setText("No keybox data");
         }
     }
 
