@@ -218,10 +218,6 @@ The progress bar dynamically switches between media and download states, ensurin
         The Island notification feature, inspired by iOS\'s Dynamic Island, transforms Android\'s heads-up notifications into quick-access and compact notification utility.\n\nIsland Quick Access Controls includes the following features:\n1. Tap island notification to quick answer phone calls.\n2. Long press island notification to reject phone calls.\n3. Long press island notification to expand the island notification preview.
     </string>
 
-    <!-- Google Play Integrity Spoof -->
-    <string name="pi_spoof_title">Google Play Integrity spoof</string>
-    <string name="pi_spoof_summary">Spoof your device as different model for Google Play Integrity</string>
-
     <!-- QS Header -->
     <string name="qs_header_image_title">QS header image</string>
     <string name="qs_header_image_summary">Select QS background header image</string>
