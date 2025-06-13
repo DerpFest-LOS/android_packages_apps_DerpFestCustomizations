@@ -288,4 +288,8 @@ The progress bar dynamically switches between media and download states, ensurin
     <string name="status_bar_quick_qs_pulldown_off">Off</string>
     <string name="status_bar_quick_qs_pulldown_left">Left</string>
     <string name="status_bar_quick_qs_pulldown_right">Right</string>
+
+    <!-- Netflix Spoof -->
+    <string name="netflix_spoof_title">Netflix spoof</string>
+    <string name="netflix_spoof_summary">Spoof your device as different model for Netflix</string>
 </resources>

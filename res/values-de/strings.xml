@@ -155,4 +155,8 @@
     <string name="enable">Aktivieren</string>
     <string name="qs_header_offset_title">Zoomfaktor des Kopfzeilenbilds</string>
     <string name="qs_header_offset_summary">Größe des Kopfzeilenbilds anpassen</string>
+
+    <!-- Netflix Spoof -->
+    <string name="netflix_spoof_title">Netflix-Spoofing</string>
+    <string name="netflix_spoof_summary">Netflix ein anderes Gerätemodell vortäuschen</string>
 </resources>
