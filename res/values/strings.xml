@@ -292,4 +292,8 @@ The progress bar dynamically switches between media and download states, ensurin
     <!-- Netflix Spoof -->
     <string name="netflix_spoof_title">Netflix spoof</string>
     <string name="netflix_spoof_summary">Spoof your device as different model for Netflix</string>
+
+    <!-- Spoofing -->
+    <string name="spoofing_title">Spoofing</string>
+    <string name="spoofing_title_summary">Spoof as different device to unlock application features</string>
 </resources>
