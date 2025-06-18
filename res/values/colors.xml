@@ -9,4 +9,23 @@
     <!-- Ambient edge light -->
     <color name="ambient_edge_light_color_selector_item_outer_bg_color">@android:color/white</color>
     <color name="ambient_edge_light_color_selector_selected_icon_tint_color">#AA000000</color>
+
+    <!-- Expressive homepage icon colors (Material 3) -->
+    <color name="homepage_blue_fg">#2563EB</color>
+    <color name="homepage_pink_fg">#D946EF</color>
+    <color name="homepage_orange_fg">#FB923C</color>
+    <color name="homepage_yellow_fg">#FACC15</color>
+    <color name="homepage_green_fg">#22C55E</color>
+    <color name="homepage_grey_fg">#64748B</color>
+    <color name="homepage_cyan_fg">#06B6D4</color>
+    <color name="homepage_red_fg">#EF4444</color>
+    <color name="homepage_purple_fg">#8B5CF6</color>
+
+    <!-- Expressive homepage icon background colors (Material 3) -->
+    <color name="homepage_blue_bg">#DBEAFE</color>
+    <color name="homepage_cyan_bg">#CCFBF1</color>
+    <color name="homepage_orange_bg">#FFEDD5</color>
+    <color name="homepage_purple_bg">#EDE9FE</color>
+    <color name="homepage_green_bg">#DCFCE7</color>
+    <color name="homepage_grey_bg">#F1F5F9</color>
 </resources>
