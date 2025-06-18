@@ -28,4 +28,6 @@
     <color name="homepage_purple_bg">#EDE9FE</color>
     <color name="homepage_green_bg">#DCFCE7</color>
     <color name="homepage_grey_bg">#F1F5F9</color>
+
+    <color name="derpfest_card_bg">#23232A</color>
 </resources>
