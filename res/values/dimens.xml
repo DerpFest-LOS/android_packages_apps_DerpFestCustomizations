@@ -27,4 +27,6 @@
 
     <!-- Preference icon foreground image inset (from background edge to foreground edge) -->
     <dimen name="preference_icon_foreground_image_inset">12dp</dimen>
+
+    <dimen name="homepage_preference_text_padding_start_expressive">16dp</dimen>
 </resources>
