@@ -45,7 +45,7 @@ open class DerpFestCardSwitchPreference(
     
     private fun hideIcon() {
         holder.findViewById(R.id.icon_frame)?.visibility = View.GONE
-        val params = FrameLayout.LayoutParams(
+        val params = LinearLayout.LayoutParams(
             ViewGroup.LayoutParams.MATCH_PARENT,
             ViewGroup.LayoutParams.WRAP_CONTENT
         )
