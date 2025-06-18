@@ -54,7 +54,7 @@ open class DerpFestCardPreference @JvmOverloads constructor(
     
     private fun hideIcon() {
         holder.findViewById(R.id.icon_frame)?.visibility = View.GONE
-        val params = CardView.LayoutParams(
+        val params = FrameLayout.LayoutParams(
             ViewGroup.LayoutParams.MATCH_PARENT,
             ViewGroup.LayoutParams.WRAP_CONTENT
         )
