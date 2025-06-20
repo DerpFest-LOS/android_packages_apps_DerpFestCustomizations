@@ -56,6 +56,12 @@
             android:title="@string/status_bar_notification_ticker_title"
             android:fragment="org.derpfest.customizations.fragment.TickerSettingsFragment" />
 
+    <org.derpfest.support.preferences.SystemSettingSwitchPreference
+        android:key="bluetooth_battery_level"
+        android:title="@string/status_bar_bluetooth_battery_level_title"
+        android:summary="@string/status_bar_bluetooth_battery_level_summary"
+        android:defaultValue="true" />
+
     <lineageos.preference.LineageSystemSettingListPreference
         android:key="qs_quick_pulldown"
         android:title="@string/status_bar_quick_qs_pulldown_title"

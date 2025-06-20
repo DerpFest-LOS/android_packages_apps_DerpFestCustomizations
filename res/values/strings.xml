@@ -289,6 +289,10 @@ The progress bar dynamically switches between media and download states, ensurin
     <string name="status_bar_battery_percentage_text_next">Next to the icon</string>
     <string name="status_bar_battery_percentage_text_left">Left of the icon</string>
 
+    <!-- Status bar - Bluetooth battery level -->
+    <string name="status_bar_bluetooth_battery_level_title">Bluetooth battery level</string>
+    <string name="status_bar_bluetooth_battery_level_summary">Show battery level for connected Bluetooth devices in status bar</string>
+
     <!-- Statusbar brightness -->
     <string name="status_bar_toggle_brightness">Brightness control</string>
     <string name="status_bar_toggle_brightness_summary">Adjust brightness by sliding across the status bar</string>

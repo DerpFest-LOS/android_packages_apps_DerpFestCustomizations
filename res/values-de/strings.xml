@@ -159,4 +159,8 @@
     <!-- Netflix Spoof -->
     <string name="netflix_spoof_title">Netflix-Spoofing</string>
     <string name="netflix_spoof_summary">Netflix ein anderes Gerätemodell vortäuschen</string>
+
+    <!-- Status bar - Bluetooth battery level -->
+    <string name="status_bar_bluetooth_battery_level_title">Bluetooth-Akku-Anzeige</string>
+    <string name="status_bar_bluetooth_battery_level_summary">Akku-Stand für verbundene Bluetooth-Geräte in der Statusleiste anzeigen</string>
 </resources>

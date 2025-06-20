@@ -208,4 +208,8 @@ La barra di progresso cambia dinamicamente tra multimedia e download/upload, ass
     <string name="mic_camera_privacy_indicators_summary">Mostra indicatori quando delle app usano fotocamera o microfono</string>
     <string name="location_privacy_indicator_title">Posizione</string>
     <string name="location_privacy_indicator_summary">Mostra indicatori quando delle app usano la posizione</string>
+
+    <!-- Status bar - Bluetooth battery level -->
+    <string name="status_bar_bluetooth_battery_level_title">Livello batteria Bluetooth</string>
+    <string name="status_bar_bluetooth_battery_level_summary">Mostra il livello della batteria per i dispositivi Bluetooth connessi nella barra di stato</string>
 </resources>
