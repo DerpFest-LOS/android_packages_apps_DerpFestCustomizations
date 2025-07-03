@@ -201,7 +201,6 @@ La barra di progresso cambia dinamicamente tra multimedia e download/upload, ass
     <string name="qs_header_offset_summary">Modifica la grandezza dell\'immagine di intestazione</string>
 
     <!-- Privacy Settings -->
-    <string name="privacy_settings_title">Privacy</string>
     <string name="privacy_indicators_title">Indicatori di Privacy</string>
     <string name="privacy_indicators_summary">Mostra indicatori quando delle app usano fotocamera, microfono o posizione</string>
     <string name="mic_camera_privacy_indicators_title">Fotocamera &amp; Microfono</string>
